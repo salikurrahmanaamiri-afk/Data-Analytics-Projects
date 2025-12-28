@@ -1,0 +1,25 @@
+Key observations from column wise analysis:-
+vin - unique values are too high, like the primary key for this table
+customer_verbatim & correction_verbatim - free text where customer and service team explain the issue in their own words
+Cost columns - numeric column, very important for business, can calculate KPIs from this
+Dealer & location - gives categories so can compare based on dealers and regions
+
+
+Data Cleaning Summary:-
+- fixed casing and spacing from the columns
+- then, dealt with the missing values - found and removed a column which was 100% null and 
+  according to the data type, objects filled with "unknown" and numeric data with median values
+- code for duplicates but found that in this data set is there was no duplicates
+- validation of data type in date column done for date wise analysis
+
+Top 5 critical columns:-
+customer_verbatim - customer explain the problem in their own words
+causal_part_nm - tells which part caused the problem
+global_labor_code_description - explains what kind of repair work done by the team
+totalcost - shows how much cost came for that issue
+platform - helps to compare issues across product models like truck, suv, lux cars, etc
+
+Key takeaway from generated keys:-
+this code takes customer complaint text and gives simple issue tag, 
+so free text become clean data and easy to analyze later
+
